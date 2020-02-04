@@ -1,0 +1,29 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: var(--header-height);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav__item {
+    padding: 0 .35rem;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: -1px;
+}
+
+.nav__item a:active {
+    text-decoration: underline;
+}

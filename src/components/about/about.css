@@ -1,0 +1,120 @@
+.about {
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.about__border {
+    position: absolute;
+    width: 100%;
+    border-top: none;
+    border-bottom: 1px solid var(--bc-primary);
+    opacity: 0.5;
+    height: 0px;
+    background: transparent;
+    margin: 0;
+}
+
+.about__content {
+    /* width: 500px;
+    height: 500px; */
+
+    max-width: 950px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.about__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about__header {
+    font-family: BebasNeue;
+    font-size: 1.75rem;
+    font-weight: normal;
+    letter-spacing: 13px;
+    margin: 0;
+    padding-right: 8rem;
+    margin-top: 5px;
+}
+
+.about__subheader {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: right;
+    opacity: 100%;
+    color: var(--fc-secondary);
+    margin: 0;
+    padding-left: 6rem;
+}
+
+.about__info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* padding: 0 1rem; */
+}
+
+.about__info-container p {
+    margin: 0;
+    padding: 0rem 1.6rem;
+    font-size: .9rem;
+}
+
+.about__info-container a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+.about__section-divider {
+    height: 40px;
+    width: 0px;
+    background: transparent;
+    border-right: none;
+    border-left: 1px solid var(--bc-primary);
+    opacity: 0.5;
+    margin: 0;
+}
+
+.about__description {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+}
+
+.about__description p {
+    text-align: left;
+}
+
+#baltimore-svg {
+    padding-right: 2rem;
+    max-width: 100%;
+}
+
+.baltimore-svg path {
+    stroke: var(--fc-primary);
+}
+
+.baltimore-path {
+    stroke: var(--fc-primary);
+    
+}
+
+.baltimore-path:hover {
+    stroke-width: 2px;
+}
+
+.baltimore-label-container {
+    fill: var(--baltimore-svg-label-bg);
+}
+
+.baltimore-label {
+    fill: var(--baltimore-svg-label-fc);
+}

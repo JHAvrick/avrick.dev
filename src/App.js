@@ -1,24 +1,71 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'normalize.css';
+import './app.css';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
+
+import Header from './components/header/header';
+import About from './components/about/about';
+
+import Variants from "./components/variants";
+
+
+
+function Skills(){
+  return (
+      <motion.div className="about__content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} >
+        I AM A SKILLS SECTION
+      </motion.div>
+    )
+}
+
+function Projects(){
+  return (
+    <motion.div className="about__content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}  >
+    I AM A Projects SECTION
+  </motion.div>
+
+  )
+}
+function Contact(){return (
+  <motion.div className="about__content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}  >
+  I AM A Contact SECTION
+</motion.div>
+
+)}
+
 
 function App() {
+
+
+  function handleExit(){
+    console.log("!!!");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div id="app" className="app">
+      
+      <Router>
+        <Header />
+        <AnimatePresence exitBeforeEnter onExitComplete={handleExit}>
+            <Switch location={window.location} key={window.location.pathname}>
+              <Route exact path="/" component={About} key="about" />
+              <Route exact path="/about" component={About} /> 
+              <Route exact path="/skills" component={Skills} key="skills" />
+              <Route exact path="/projects" component={Projects} key="projects" />
+              <Route exact path="/contact" component={Contact} key="contact" />
+            </Switch>
+        </AnimatePresence>
+      </Router>
+
     </div>
   );
 }

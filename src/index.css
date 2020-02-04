@@ -1,10 +1,75 @@
-body {
+@font-face {
+  font-family: Aku;
+  src: url("assets/aku.otf") format("opentype");
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url("assets/BebasNeue-Bold.otf") format("opentype");
+}
+
+:root {
+  /* Light Theme */
+  --main-bg-color: #fbfbfb;
+  --bc-primary: rgb(0,0,0,.5);
+  --fc-primary: rgb(0,0,0,.8);
+  --fc-secondary: rgb(0,0,0,.8);
+  --fc-emphasized: rgb(0,0,0,1);
+  --font-weight: 300;
+  --baltimore-svg-label-bg: #5B5B5B;
+  --baltimore-svg-label-fc:#E7E7E7;
+
+  /* Dark Theme */
+  /* --main-bg-color: #262626;
+  --bc-primary: rgb(255,255,255,.6);
+  --fc-primary: rgb(255,255,255,.75);
+  --fc-secondary: rgb(255,255,255,1);
+  --fc-emphasized: rgb(255,255,255,.9);
+  --font-weight: 100;
+  --baltimore-svg-label-bg: white;
+  --baltimore-svg-label-fc: black; */
+
+  /* Layout */
+  --header-height: 50px;
+
+}
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: var(--font-weight);
+  font-size: 18px;
+  color: var(--fc-primary);
+  line-height: 1.4;
+  /* letter-spacing: -0.5px; */
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: var(--main-bg-color);
+}
+
+h1, h2 {
+  color: var(--fc-emphasized);
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
 }
 
 code {
