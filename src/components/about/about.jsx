@@ -6,17 +6,12 @@ import { motion } from "framer-motion";
 import { MdPhone, MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
-
-console.log(Variants.Page);
-
 function About() {
 
-    function handleButtonClicked(){
-        window.location = "/skills"
-    }
+    function handleButtonClicked(){ window.location = "/skills" }
 
     return (
-      <section className="about">
+      <section data-testid="about" className="about">
 
             <motion.div className="about__content" initial="initial" animate="enter" exit="exit" variants={Variants.Page} transition={{duration: 1.5, staggerChildren: 0.5}} > 
             

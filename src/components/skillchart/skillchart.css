@@ -1,0 +1,18 @@
+.skillchart {
+    overflow: hidden;
+    padding: 0;
+}
+
+
+.skillchart__line {
+    left: 148px;
+    position: absolute;
+    width: 0;
+    border-top: none;
+    border-left: 2.5px solid black;
+    opacity: .6;
+    height: 100%;
+    background: transparent;
+    margin: 0;
+}
+

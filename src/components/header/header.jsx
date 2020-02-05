@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 function Header() {
   return (
-      <header  className="header" >
+      <header data-testid="header" className="header" >
         <nav className="nav">
           <li className="nav__item"> <Link title="Visit About Section" to="/about"> About </Link> </li> /
           <li className="nav__item"> <Link title="Visit About Section" to="/skills"> Skills </Link> </li> /

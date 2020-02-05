@@ -13,18 +13,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Header from './components/header/header';
 import About from './components/about/about';
+import Skills from './components/skills/skills';
 
 import Variants from "./components/variants";
 
 
-
-function Skills(){
-  return (
-      <motion.div className="about__content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} >
-        I AM A SKILLS SECTION
-      </motion.div>
-    )
-}
 
 function Projects(){
   return (

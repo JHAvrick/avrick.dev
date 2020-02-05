@@ -1,0 +1,56 @@
+.skillbar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.skillbar__label {
+    width: 150px;
+    padding: 0 10px;
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.skillbar__bar {
+    display: block;
+    height: 13px;
+    background: black;
+    opacity: .6;
+    transition: 200ms;
+}
+
+.skillbar__bar--selected {
+    display: block;
+    height: 15px;
+    background: blue;
+    opacity: .5;
+    transition: 200ms;
+}
+
+.skillbar__bar:hover {
+    opacity: .5;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+
+.skillbar__description {
+    padding: 0 10px;
+    text-align: left;
+    font-size: 0.7rem;
+    /* opacity: 0;
+    width: 0; */
+    transition: 200ms;
+}
+
+/* .skillbar__description--selected {
+    padding: 0 10px;
+    text-align: left;
+    font-size: 0.8rem;
+    opacity: 1;
+    width: auto;
+    transition: 200ms;
+} */
