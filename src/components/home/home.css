@@ -1,0 +1,31 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-height: 85vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+
+}
+
+.home__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.home__left {
+    width:  35%;
+}
+
+.home__right {
+    width: 45%;
+    text-align: left;
+    font-size: .9rem;
+    line-height: 1.5;
+    opacity: .9;
+}

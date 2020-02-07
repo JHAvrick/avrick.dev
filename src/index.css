@@ -1,18 +1,34 @@
 @font-face {
   font-family: Aku;
-  src: url("assets/aku.otf") format("opentype");
+  src: url("assets/fonts/aku.otf") format("opentype");
 }
+
 
 @font-face {
   font-family: BebasNeue;
-  src: url("assets/BebasNeue-Bold.otf") format("opentype");
+  src: url("assets/fonts/BebasNeue-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("assets/fonts/CONSOLA.TTF") format("truetype");
 }
 
 :root {
+
+  /* THEME */
+  --bg-primary: black;
+  --bg-primary: linear-gradient(142deg, rgba(0,0,0,1) 0%, rgba(55,55,55,1) 52%, rgba(52,52,52,1) 100%);
+  --fc-primary: white;
+  --fc-blue: #93CEFD;
+  --fc-purple: #F692FF;
+  --fc-lime: lime;
+
+
   /* Light Theme */
   --main-bg-color: #fbfbfb;
   --bc-primary: rgb(0,0,0,.5);
-  --fc-primary: rgb(0,0,0,.8);
+  
   --fc-secondary: rgb(0,0,0,.8);
   --fc-emphasized: rgb(0,0,0,1);
   --font-weight: 300;
@@ -49,7 +65,7 @@ html {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Consolas', sans-serif;
   font-weight: var(--font-weight);
   font-size: 18px;
   color: var(--fc-primary);
@@ -57,11 +73,26 @@ html, body {
   /* letter-spacing: -0.5px; */
 
   margin: 0;
-  background: var(--main-bg-color);
+  background: var(--bg-primary);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1, h2 {
   color: var(--fc-emphasized);
+}
+
+h2 {
+  color: white;
+  font-family: aku;
+  letter-spacing: 12px;
+  font-size: 2rem;
+  margin-bottom: 10vh;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-left: 12px;
 }
 
 html {

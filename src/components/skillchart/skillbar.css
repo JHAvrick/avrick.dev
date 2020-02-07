@@ -6,7 +6,7 @@
 }
 
 .skillbar__label {
-    width: 150px;
+    width: 200px;
     padding: 0 10px;
     text-align: right;
     font-size: 0.9rem;
@@ -17,16 +17,15 @@
 .skillbar__bar {
     display: block;
     height: 13px;
-    background: black;
-    opacity: .6;
+    background: white;
+    opacity: 1;
     transition: 200ms;
 }
 
 .skillbar__bar--selected {
     display: block;
     height: 15px;
-    background: blue;
-    opacity: .5;
+    background: lime;
     transition: 200ms;
 }
 

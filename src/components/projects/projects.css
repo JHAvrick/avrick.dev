@@ -1,0 +1,42 @@
+.projects {
+    width: 90%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+
+.projects__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    background: black;
+    position: relative;
+}
+
+.projects__tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 50px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.projects__selection {
+    position: absolute;
+    left: 0;
+    width: 33%;
+    height: 50px;
+    background: #C573E7;
+    transition: 200ms;
+}

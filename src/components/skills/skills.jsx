@@ -1,41 +1,36 @@
 import React, { useState } from 'react';
-import './skills.css';
-import Variants from "../variants";
-import Tilt from 'react-tilt';
-import { motion } from "framer-motion";
 import Skillchart from '../skillchart/skillchart';
+import RelatedProjects from '../related-projects/related-projects';
+import Tilt from 'react-tilt';
+import './skills.css';
 
-function Skills() {
+function Skills(props) {
 
-
+    const [selectedSkillId, setSelectedSkillId] = useState(0);
+    const handleSkillSelected = (skillId) => setSelectedSkillId(skillId)
+    
     return (
-      <section data-testid="skills" className="skills">
-         <motion.div className="skills__content" initial="initial" animate="enter" exit="exit" variants={Variants.Page} transition={{duration: 1.5}} > 
+        <section className="skills">
 
-         <hr className="about__border" style={{top: "-1px"}} />
-          <div className="about__header-container">
-              <h1 className="about__header">PROFICIENCIES</h1>
-              {/* <h2 className="about__subheader"> Description </h2> */}
-          </div>
-          <hr className="about__border" style={{position: "initial"}} />
-          
-        <div className="skills__skill-section">
-          <div style={{margin: "2rem 0"}}>
-            <Tilt className="Tilt" options={{ max : 8, scale: 1.02 }} >
-                <Skillchart /> 
-            </Tilt>
-          </div>
+            <h2>Skills</h2>
 
+            <div style={{display: "flex", justifyContent: "center", width: "100%", minHeight: "375px"}}>
+                <div className="skills__left">
+                    <Tilt className="Tilt" options={{ max : 10, scale: 1.02 }} >
+                    <Skillchart onSkillSelected={handleSkillSelected} />
+                    </Tilt>
+                </div>
 
-        
-        </div>
+                <div className="skills__right">
+                    <RelatedProjects skillId={selectedSkillId} />
+                </div>
+            </div>
 
+            <p style={{marginTop: "10vh"}}>You can select a skill to see a list of related projects</p>
 
-
-
-        </motion.div> 
-      </section>
-  );
+            {props.children}
+        </section>
+    );
 }
 
 export default Skills;

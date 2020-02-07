@@ -1,0 +1,25 @@
+#baltimore-svg {
+    padding-right: 2rem;
+    max-width: 100%;
+}
+
+.baltimore-svg path {
+    stroke: var(--fc-primary);
+}
+
+.baltimore-path {
+    stroke: var(--fc-primary);
+    
+}
+
+.baltimore-path:hover {
+    stroke-width: 2px;
+}
+
+.baltimore-label-container {
+    fill: var(--baltimore-svg-label-bg);
+}
+
+.baltimore-label {
+    fill: var(--baltimore-svg-label-fc);
+}
