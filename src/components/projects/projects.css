@@ -3,6 +3,7 @@
     min-height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -13,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    min-width: 50%;
     height: 50px;
     background: black;
     position: relative;
@@ -23,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33%;
+    min-width: 33%;
     height: 50px;
     background: transparent;
     color: white;

@@ -1,0 +1,40 @@
+.project-card {
+    width: 50%;
+    /* min-height: 400px; */
+    background: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 3px;
+    padding-bottom: 3rem;
+}
+
+.project-card__left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card__right {
+    width: 65%;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.project-card__header h3 {
+    font-family: Aku;
+    font-weight: 100;
+    text-align: left;
+    font-size: 1.4rem;
+    letter-spacing: 10px;
+    border-bottom: 1px solid white; 
+    padding-bottom: 7px;
+}
+
+.project-card__content p {
+    text-align: left;
+    margin: .2rem 0;
+    font-size: .85rem;
+}
