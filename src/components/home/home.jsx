@@ -23,12 +23,12 @@ function Home(props) {
                         Proficient in modern JavaScript, including familiarity with current build/testing tools, 
                         component-based UI/UX libraries, and design best practices. </p>
 
-                    <p>Capable of meeting and surpassing project requirements and seeking opportunities where 
+                    <p className="home__hide-sm">Capable of meeting and surpassing project requirements and seeking opportunities where 
                         I can utilize and extend current skills to solve challenging and unique problems. </p>
 
-                    <p> Currently based in Charm City, Baltimore. </p>
+                    <p> Most recently based in Baltimore. </p>
 
-                    <motion.button onClick={() => history.push("/skills")} style={{marginTop: "3rem", }} className="button" value="See More" whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}> 
+                    <motion.button onClick={() => history.push("/skills")} className="button home__button" value="See More" whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}> 
                         Learn More About Me
                     </motion.button>
                 </div>

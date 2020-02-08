@@ -1,5 +1,5 @@
 .skills {
-    width: 90%;
+    width: 100%;
     min-height: 100vh;
     overflow: hidden;
     display: flex;
@@ -8,6 +8,7 @@
     align-items: center;
     margin: auto;
     position: relative;
+    background: #1b0e24;
 }
 
 .skills__left {

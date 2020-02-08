@@ -4,9 +4,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0;
     padding: 1rem 0rem .35rem;
-    /* border-bottom: 1px solid white; */
     margin: auto;
+}
+
+.header-mobile {
+    display: none;
 }
 
 .header__h1 {
@@ -15,7 +19,10 @@
     font-weight: normal;
     letter-spacing: 13px;
     margin: 0;
+    padding: initial;
     color: var(--fc-primary);
+    border-bottom: none;
+    border-top: none;
 }
 
 .header__border-bottom {
@@ -26,6 +33,7 @@
     background: transparent;
     border-bottom: 1.5px solid white;
     opacity: .85;
+    display: initial;
 }
 
 .nav {
@@ -52,4 +60,29 @@
 
 .nav__item a:active {
     text-decoration: underline;
+}
+
+@media (max-width: 1024px){
+    .nav {
+        display: none;
+    }
+
+    .header {
+        width: 90%;
+        /* margin-top: 4rem; */
+    }
+
+    .header__h1 {
+        width: 100%;
+        margin: 1rem auto 1rem;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 0.5rem;
+        letter-spacing: 7px;
+    }
+
+    
+    .header__border-bottom {
+        display: none;
+    }
 }

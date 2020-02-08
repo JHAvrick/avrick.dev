@@ -10,11 +10,19 @@
     position: relative;
 }
 
+.projects__tabs-container {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-bottom: 3rem;
+}
+
 .projects__tabs {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 50%;
+    width: 740px;
     height: 50px;
     background: black;
     position: relative;
@@ -25,7 +33,7 @@
     justify-content: center;
     align-items: center;
     min-width: 33%;
-    height: 50px;
+    height: 100%;
     background: transparent;
     color: white;
     text-align: center;
@@ -40,4 +48,21 @@
     height: 50px;
     background: #C573E7;
     transition: 200ms;
+}
+
+
+@media (max-width: 768px) {
+    .projects__tabs-container {
+        margin-bottom: 1rem;
+    }
+
+    .projects__tabs {
+        min-width: 90%;
+        height: 40px;
+    }
+
+    .projects__selection {
+        height: 40px;
+    }
+    
 }

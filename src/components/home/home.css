@@ -1,9 +1,11 @@
 .home {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    min-height: 85vh;
+    width: 100%;
+    min-width: 1024px;
+    min-height: 91vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -16,6 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: row;
+    width: 1200px;
 }
 
 .home__left {
@@ -28,4 +32,43 @@
     font-size: .9rem;
     line-height: 1.5;
     opacity: .9;
+}
+
+.home__button {
+    width: auto;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .home {
+        min-width: 100%;
+        align-items: flex-start;
+    }
+
+    .home__content {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home__left {
+        width: 100%;
+    }
+    
+    .home__right {
+        width: 100%;
+        text-align: left;
+        font-size: .9rem;
+        line-height: 1.5;
+        opacity: .9;
+    }
+
+    .home__hide-sm {
+        display: none;
+    }
+
+    .home__button {
+        margin-top: 1.5rem;
+        width: 100%;
+    }
 }

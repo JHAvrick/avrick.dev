@@ -23,3 +23,11 @@
 .baltimore-label {
     fill: var(--baltimore-svg-label-fc);
 }
+
+@media (max-width: 1024px){
+    #baltimore-svg {
+        margin-bottom: 1rem;
+        padding-right: 0;
+        width: 80%;
+    }
+}

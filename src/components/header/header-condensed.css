@@ -50,3 +50,9 @@
 .nav-vertical__item a:active {
     text-decoration: underline;
 }
+
+@media (max-width: 1024px){
+    .header-condensed {
+        display: none;
+    }
+}
