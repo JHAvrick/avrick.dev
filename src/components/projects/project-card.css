@@ -84,7 +84,7 @@
 
 @media (max-width: 768px){
     .project-card {
-        width: 100%;
+        width: 90%;
         flex-direction: column;
     }
 
