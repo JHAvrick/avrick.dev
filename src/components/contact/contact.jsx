@@ -11,6 +11,8 @@ function Contact(props) {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         
+        //let reqUrl = "http://localhost:8080/contactme";
+        let reqUrl = "https://avrick-portfolio.herokuapp.com/contactme";
         let reqBody = {
             name: nameInputEl.current.value,
             email: emailInputEl.current.value,
@@ -19,7 +21,7 @@ function Contact(props) {
 
         try {
             (async () => {
-                const rawResponse = await fetch('http://localhost:8080/contactme', {
+                const rawResponse = await fetch(reqUrl, {
                   method: 'POST',
                   headers: {
                     'Accept': 'application/json',
