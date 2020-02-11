@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import 'normalize.css';
-import './app.css';
+import './App.css';
 
 import {
   BrowserRouter as Router,
