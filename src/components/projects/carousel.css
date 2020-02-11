@@ -1,0 +1,86 @@
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel__next, .carousel__prev {
+    font-size: 64px;
+    font-weight: 100;
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transition: 200ms;
+}
+
+.carousel__next:hover , .carousel__prev:hover {
+    opacity: .6;
+    transition: 200ms;
+}
+
+.carousel__dots {
+    position: absolute;
+    top: 102%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel__dot {
+    display: inline-block;
+    background: #5d5dff;
+    background: var(--fc-projects-tabselection);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 .5rem;
+    opacity: 0.5;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.carousel__dot:hover {
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+    transition: 200ms;
+}
+
+.carousel__dot--selected {
+    display: inline-block;
+    background: #5d5dff;
+    background: var(--fc-projects-tabselection);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 .5rem;
+    opacity: 1;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .carousel {
+        margin-bottom: 6rem;
+    }
+
+    .carousel__next {
+        width: 75px;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        top: 99%;
+        right: 0;
+    }
+
+    .carousel__prev {
+        width: 75px;
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        top: 99%;
+        left: 0;
+    }
+}

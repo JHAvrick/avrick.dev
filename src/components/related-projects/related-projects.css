@@ -1,9 +1,33 @@
 .related-projects {
-    overflow: hidden;
     padding: 0;
     margin: 0;
     list-style-type: none;
     min-height: 100%;
+    margin-top: none;
 }
 
+.related-projects__label {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
 
+@media (min-width: 768px){
+    .related-projects__hide-md {
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .related-projects {
+        width: 90%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .related-projects__hide-sm {
+        display: none;
+    }
+}

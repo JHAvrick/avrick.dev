@@ -4,21 +4,77 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: auto;
     position: relative;
     background: #1b0e24;
+    background: var(--bg-skills);
+    transition: background-color 500ms;
+    padding: 1rem 0;
+}
+
+.skills__header {
+    font-weight: 100;
+    margin: 4rem 0 15vh;
+}
+
+.skills__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: 375px;
 }
 
 .skills__left {
-     width: 40%; 
+     min-width: 550px;
+     display: initial;
 }
 
 .skills__right {
+    display: initial;
     width: 35%;
+    min-width: 400px;
     text-align: left;
     font-size: .9rem;
     line-height: 1.5;
     opacity: .9;
+}
+
+@media (max-width: 768px){
+
+    .skills__header {
+        margin: 1rem;
+        color: #e280ff;
+        color: var(--fc-skills-header);
+        transition: color 500ms;
+        letter-spacing: 5px;
+        border-bottom: 0;
+        border-top: 0;
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills__content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .skills__left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills__right {
+        min-width: auto;
+        width: 100%;
+    }
 }

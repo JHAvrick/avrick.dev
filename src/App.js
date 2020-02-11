@@ -5,25 +5,23 @@ import './app.css';
 import {
   BrowserRouter as Router,
   Redirect,
-  useLocation,
-  useHistory
+  useLocation
 } from "react-router-dom";
-import { motion } from "framer-motion";
-
-import BgAbstract from './assets/images/bg-abstract.png';
 
 import Header from './components/header/header';
 import Home from './components/home/home';
 import Skills from './components/skills/skills';
 import Projects from './components/projects/projects';
 import Contact from './components/contact/contact';
-
 import VisibilitySensor from 'react-visibility-sensor';
+
+import Particles from 'react-particles-js';
+//import ParticleConfig from './assets/particlesjs-config';
 
 function App() {
   return (
     <div id="app" className="app">
-      <motion.img initial={{opacity: 0}} animate={{opacity:0.09}} transition={{duration: 1.5}} className="app__bg" src={BgAbstract}></motion.img>
+      {/* <motion.img initial={{opacity: 0}} animate={{opacity:0.09}} transition={{duration: 1.5}} className="app__bg" src={BgAbstract}></motion.img> */}
       <Router>
         <Redirect to="/home" /> 
         <AppContainer />
@@ -37,16 +35,14 @@ function AppContainer(){
   /**
    * Wait a couple seconds before activating the visiblity sensor components
    */
-  const [sensorsActive, setSensorsActive] = useState(false);
-  useEffect(() => setTimeout(() => setSensorsActive(true), 2000), []);
+  // const [sensorsActive, setSensorsActive] = useState(false);
+  // useEffect(() => setTimeout(() => setSensorsActive(true), 5000), []);
 
   /**
    * The static header appears based on different triggers depending on whether the user is descending or ascending
    */
   const [headerCondensed, setHeaderCondensed] = useState(false);
-  const handleCondenseHeaderDescending = (isVisible) => !isVisible && !headerCondensed ? setHeaderCondensed(true) : null;
-  const handleCondenseHeaderAcsending = (isVisible) => isVisible && headerCondensed ? setHeaderCondensed(false) : null;
-
+  const handleHeaderVisible = (isVisible) => setHeaderCondensed(!isVisible);
 
   /**
    * Refs for use with scrollIntoView() when the page location changes
@@ -59,6 +55,7 @@ function AppContainer(){
   let location = useLocation();
   useEffect(() => {
     switch (location.pathname){
+      default: 
       case "/home":
         homeSectionStartEl.current.scrollIntoView({ behavior: "smooth" });
         break;
@@ -76,24 +73,21 @@ function AppContainer(){
 
   return(
     <div className="app-container">
-      <div ref={homeSectionStartEl}></div>
-      <Header condensed={headerCondensed} />
-      <Home>
-        <VisibilitySensor active={sensorsActive} delayedCall={true} onChange={handleCondenseHeaderAcsending}>
-          <div style={{position: "absolute", top: "40%", width: "100%", height: "1px", background: "none"}}></div>
-        </VisibilitySensor>
-        <VisibilitySensor active={sensorsActive} delayedCall={true} onChange={handleCondenseHeaderDescending}>
-          <div style={{position: "absolute", top: "99%", width: "100%", height: "1px", background: "none"}}></div>
-        </VisibilitySensor>
-      </Home>
+      <Particles className="particles" style={{position: "absolute", top: 0, left: 0, height: "100%", opacity: 0.5}} />
 
-      <div ref={skillSectionStartEl} style={{width: "100%", height: "1px", background: "none"}}></div>
+      <div ref={homeSectionStartEl}></div>
+      <VisibilitySensor delayedCall={true} onChange={handleHeaderVisible}>
+        <Header condensed={headerCondensed} />
+      </VisibilitySensor>
+      <Home />
+
+      <div ref={skillSectionStartEl} style={{ margin: "auto", width: "50%", height: "1px", background: "var(--fc-primary)"}}></div>
       <Skills />
 
-      <div ref={projectsSectionStartEl} style={{width: "100%", height: "1px", background: "none"}}></div>
+      <div ref={projectsSectionStartEl} style={{ margin: "auto", width: "50%", height: "1px", background: "var(--fc-primary)"}}></div>
       <Projects />
-
-      <div ref={contactSectionStartEl} style={{width: "100%", height: "1px", background: "none"}}></div>
+      
+      <div ref={contactSectionStartEl} style={{ margin: "auto", width: "50%", height: "1px", background: "var(--fc-primary)"}}></div>
       <Contact />
     </div>
   )

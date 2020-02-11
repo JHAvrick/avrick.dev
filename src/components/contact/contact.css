@@ -1,10 +1,92 @@
 .contact {
-    width: 90%;
+    width: 100%;
     min-height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: auto;
     position: relative;
+    font-weight: 100;
+    background: #091100;
+    background: var(--bg-contact);
+    transition: background 500ms;
+    padding: 1rem 0;
+}
+
+.contact__header {
+    font-weight: 100;
+    margin: 4rem 0;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 500px;
+    margin-top: 0;
+}
+
+.contact__form-input {
+    background: #606060;
+    background: var(--bg-contact-input);
+    transition: background 500ms;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+.contact__message-input {
+    max-width: 100%;
+    min-height: 300px;
+    resize: none;
+}
+
+.contact__form-input::placeholder {
+    color: #a6e5a9;
+    color: var(--fc-contact-input-placeholder);
+    transition: color 500ms;
+}
+
+.contact__form-submit {
+    background: #bbffac;
+    background: var(--bg-contact-submit);
+    transition: background 500ms;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact__form {
+        margin-top: 2rem;
+        width: 90%;
+    }
+
+    .contact__message-input {
+        min-height: 250px;
+    }
+
+    .contact__header {
+        margin: 1rem;
+        color: #90ffaa;
+        color: var(--fc-contact-header);
+        transition: color 500ms;
+        letter-spacing: 5px;
+        border-bottom: 0;
+        border-top: 0;
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
 }

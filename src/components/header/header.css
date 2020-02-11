@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    padding: 1rem 0rem .35rem;
+    padding: 1.5rem 0rem .35rem;
     margin: auto;
 }
 
@@ -31,9 +31,11 @@
     top: 100%;
     left: 0;
     background: transparent;
-    border-bottom: 1.5px solid white;
     opacity: .85;
     display: initial;
+    border-bottom: 1.5px solid white;
+    border-bottom: 1px solid var(--fc-primary);
+    transition: border-bottom 500ms;
 }
 
 .nav {
@@ -69,16 +71,21 @@
 
     .header {
         width: 90%;
+        padding: .5rem 0rem .35rem;
         /* margin-top: 4rem; */
     }
 
     .header__h1 {
         width: 100%;
         margin: 1rem auto 1rem;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
         padding: 0.5rem;
         letter-spacing: 7px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-top: 1px solid var(--fc-primary);
+        border-bottom: 1px solid var(--fc-primary);
+        transition: border-top 500ms;
+        transition: border-bottom 500ms;
     }
 
     

@@ -4,17 +4,26 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
     position: relative;
+    background: #00101a;
+    background: var(--bg-projects);
+    transition: background 500ms;
+    padding: 1rem 0;
+}
+
+.projects__header {
+    font-weight: 100;
+    margin: 4rem 0 15vh;
 }
 
 .projects__tabs-container {
     display: flex; 
     justify-content: center; 
-    width: 100%; 
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    width: auto;
+    /* margin-top: 1rem; */
 }
 
 .projects__tabs {
@@ -25,6 +34,8 @@
     width: 740px;
     height: 50px;
     background: black;
+    background: var(--bg-project-tabs);
+    transition: background 500ms;
     position: relative;
 }
 
@@ -44,15 +55,32 @@
 .projects__selection {
     position: absolute;
     left: 0;
-    width: 33%;
+    width: 34%;
     height: 50px;
-    background: #C573E7;
+    background: #6b56ff;
+    background: var(--fc-projects-tabselection);
+    transition: background 500ms;
     transition: 200ms;
 }
 
 
 @media (max-width: 768px) {
+    .projects__header {
+        margin: 1rem 0 1.5rem;
+        color: #90caff;
+        color: var(--fc-projects-header);
+        transition: color 500ms;
+        letter-spacing: 5px;
+        border-bottom: 0;
+        border-top: 0;
+        font-weight: 100;
+        font-size: 1.5rem;
+        text-align: left;
+        width: 100%;
+    }
+
     .projects__tabs-container {
+        width: 100%; 
         margin-bottom: 1rem;
     }
 

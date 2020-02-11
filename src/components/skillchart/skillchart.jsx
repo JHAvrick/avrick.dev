@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './skillchart.css';
 import './skillbar.css';
 import SkillList from '../skills';
+//import scaleColors from '../../util/scalecolors';
 
 const barColors = ["#8FF2FF", "#46ADFF", "#3A59FE", "#631CFC", "#7E1AFF", "#9E00FF", "#EB00FF", "#FF0099", "#FF9900", "#FF5C00", "#FF005C", "#FF0000"];
+
+//const barColors = scaleColors([[186,255,255], [186,255,201], [255,0,0]], 5);
 
 function Skillchart(props) {
   const [selected, setSelected] = useState(0);
@@ -14,7 +17,7 @@ function Skillchart(props) {
   
   return (
       <ul className="skillchart">
-        <div initial={{height:0}} animate={{height:365}} transition={{duration: 1}} className="skillchart__line"></div>
+        <div className="skillchart__line"></div>
         {SkillList.map((skill, index) => 
           <Skillbar 
             id={index} 
@@ -45,7 +48,7 @@ function Skillbar(props){
         className={props.selected === props.id ? "skillbar__bar--selected" : "skillbar__bar"} 
         onClick={() => props.onClick(props.id)}
         style={{
-          width: (250 * props.percentage) + "px", 
+          width: (45 * props.percentage) + "%", 
           background: props.color 
         }}>
       </span>

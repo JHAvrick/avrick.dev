@@ -11,14 +11,13 @@ function Skills(props) {
     
     return (
         <section className="skills">
+            <h2 className="skills__header">Skills</h2>
 
-            <h2>Skills</h2>
-
-            <div style={{display: "flex", justifyContent: "center", width: "100%", minHeight: "375px"}}>
+            <div className="skills__content">
                 <div className="skills__left">
                     <Tilt className="Tilt" options={{ max : 10, scale: 1.02 }} >
-                    <Skillchart onSkillSelected={handleSkillSelected} />
-                    </Tilt>
+                        <Skillchart onSkillSelected={handleSkillSelected} />
+                    </Tilt> 
                 </div>
 
                 <div className="skills__right">
@@ -26,7 +25,7 @@ function Skills(props) {
                 </div>
             </div>
 
-            <p style={{marginTop: "10vh"}}>You can select a skill to see a list of related projects</p>
+            <p className="related-projects__hide-sm" style={{marginTop: "10vh"}}>You can select a skill to see a list of related projects</p>
 
             {props.children}
         </section>

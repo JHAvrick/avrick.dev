@@ -30,6 +30,8 @@ function RelatedProjects(props) {
 
   return (
       <motion.ul className="related-projects" variants={container} initial="hidden" animate="show" exit={{opacity: 0,  transform: "translateY(50px)" }} >
+        <p className="related-projects__label related-projects__hide-md"> Select a skill to see related projects! </p>
+        <p className="related-projects__label related-projects__hide-sm"> Related Projects </p>
         {/* <AnimatePresence> */}
           {projectList.map((project, index) => 
             <ProjectItem 
@@ -55,8 +57,8 @@ function ProjectItem(props){
         <p className="project-item__description">{props.description}</p>
       </div>
       <div className="project-item__links">
-        {props.live ? <a style={{paddingLeft: "3px"}} target="_blank" rel="noopener noreferrer" href={props.live}><FaExternalLinkAlt color="white" size={18} /></a> : ""}
-        {props.github ? <a target="_blank" rel="noopener noreferrer" href={props.github}><FaGithub color="white" size={18} /></a> : ""}
+        {props.live ? <a style={{paddingLeft: "3px"}} target="_blank" rel="noopener noreferrer" href={props.live}><FaExternalLinkAlt className="project-item__link-icon" /></a> : ""}
+        {props.github ? <a target="_blank" rel="noopener noreferrer" href={props.github}><FaGithub className="project-item__link-icon" /></a> : ""}
       </div>
     </motion.li>
   );

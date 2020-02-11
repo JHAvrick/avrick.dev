@@ -1,23 +1,28 @@
 .project-card {
     width: 740px;
-    /* height: 400px; */
+    /* height: 345px; */
+    color: white;
+    color: var(--fc-project-card);
     background: black;
+    background: var(--bg-project-card);
+    transition: background 500ms;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     border-radius: 3px;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    margin: auto;
 }
 
 .project-card__left {
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-right: 1.5rem;
+    /* padding-right: 1.5rem; */
 }
 
 .project-card__img {
@@ -33,6 +38,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 .5rem;
+    display: none;
 }
 
 .project-card__tray-label {
@@ -43,6 +49,16 @@
 .project-card__right {
     width: 60%;
     height: 100%;
+    padding: 1rem;
+}
+
+.project-card__header {
+    border-bottom: 1px solid white; 
+    border-bottom: 1px solid var(--fc-project-card);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-card__header h3 {
@@ -51,9 +67,15 @@
     text-align: left;
     font-size: 1.4rem;
     letter-spacing: 10px;
-    border-bottom: 1px solid white; 
     padding-bottom: 7px;
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project-card__ext-link {
+    color: white;
+    color: var(--fc-project-card);
+    transition: color 500ms;
 }
 
 .project-card__header--mobile {
@@ -61,6 +83,8 @@
     text-align: left;
     margin-bottom: 1rem;
     display: none;
+    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--fc-project-card); 
 }
 
 .project-card__header--mobile h3 {
@@ -69,7 +93,6 @@
     text-align: left;
     font-size: 1.4rem;
     letter-spacing: 10px;
-    border-bottom: 1px solid white; 
     padding-bottom: 7px;
     margin: 0;
     width: 100%;
@@ -85,7 +108,9 @@
 @media (max-width: 768px){
     .project-card {
         width: 90%;
+        height: auto;
         flex-direction: column;
+        padding: 1rem;
     }
 
     .project-card__left {
@@ -94,7 +119,7 @@
     }
     
     .project-card__img {
-        width: 100%;
+        width: 65%;
     }
     
     .project-card__img-tray {
@@ -112,12 +137,14 @@
         margin-top: 1rem;
     }
   
-    .project-card__header h3 {
+    .project-card__header {
         display: none;
     }
 
     .project-card__header--mobile {
-        display: initial;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }

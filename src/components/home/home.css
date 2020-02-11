@@ -5,13 +5,14 @@
     align-items: center;
     width: 100%;
     min-width: 1024px;
-    min-height: 91vh;
+    min-height: 91.5vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     margin: auto;
     position: relative;
-
+    color: white;
+    color: var(--fc-primary);
 }
 
 .home__content {
@@ -30,7 +31,7 @@
     width: 45%;
     text-align: left;
     font-size: .9rem;
-    line-height: 1.5;
+    line-height: 1.6;
     opacity: .9;
 }
 
@@ -69,6 +70,7 @@
 
     .home__button {
         margin-top: 1.5rem;
+        margin-bottom: 3rem;
         width: 100%;
     }
 }

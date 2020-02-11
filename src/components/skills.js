@@ -9,6 +9,6 @@ export default [
     { label: "Git", percentage: 0.5, tools: [] },
     { label: "AWS", percentage: 0.4, tools: ["S3", "CloudFront"] },
     { label: "CMS", percentage: 0.3, tools: ["WordPress"] },
-    { label: "Other Languages", percentage: 0.3, tools: ["PHP", "Java"] },
+    { label: "Other", percentage: 0.3, tools: ["PHP", "Java"] },
 ]
 

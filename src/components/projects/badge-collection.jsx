@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./badge-collection.css";
 
-import { FaReact, FaNodeJs, FaHtml5, FaSass, FaAws, FaGitSquare } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaSass, FaAws, FaGitSquare, FaServer } from "react-icons/fa";
 import { DiJavascript1, DiMysql, DiPostgresql, DiHeroku, DiNpm, DiTerminal } from 'react-icons/di';
+import { GiAtom } from 'react-icons/gi';
 
 const Badges = {
     javascript: {
@@ -48,6 +49,14 @@ const Badges = {
     npm: {
         label: "NPM",
         icon: DiNpm
+    },
+    express: {
+        label: "Express",
+        icon: FaServer
+    },
+    electron: {
+        label: "Electron",
+        icon: GiAtom
     },
     misc: {
         label: "...",

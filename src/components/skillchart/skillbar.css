@@ -6,7 +6,7 @@
 }
 
 .skillbar__label {
-    width: 200px;
+    width: 150px;
     padding: 0 10px;
     text-align: right;
     font-size: 0.9rem;
@@ -20,12 +20,14 @@
     background: white;
     opacity: 1;
     transition: 200ms;
+    max-width: 250px;
 }
 
 .skillbar__bar--selected {
     display: block;
     height: 15px;
     background: lime;
+    background: var(--fc-skills-selection);
     transition: 200ms;
 }
 
@@ -53,3 +55,27 @@
     width: auto;
     transition: 200ms;
 } */
+
+
+@media (max-width: 768px){
+    .skillbar {
+        margin: 5px 0;
+    }
+
+    .skillbar__label {
+        width: 100px;
+    }
+
+    .skillbar__bar {
+        height: 10px;
+    }
+    
+    .skillbar__bar--selected {
+        height: 10px;
+    }
+
+    .skillbar__description {
+        padding: 0 5px;
+        font-size: 0.6rem;
+    }
+}

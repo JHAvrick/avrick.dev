@@ -17,18 +17,21 @@ function Home(props) {
 
                 <div className="home__right">
                     <p style={{marginTop: 0}}>
-                    <span style={{color:"var(--fc-blue)", fontWeight: "bold"}}>Full-Stack Developer </span> 
-                    
-                    with a focus on web design patterns and application development. 
-                        Proficient in modern JavaScript, including familiarity with current build/testing tools, 
-                        component-based UI/UX libraries, and design best practices. </p>
 
-                    <p className="home__hide-sm">Capable of meeting and surpassing project requirements and seeking opportunities where 
-                        I can utilize and extend current skills to solve challenging and unique problems. </p>
+                        <span style={{color:"var(--fc-blue)", fontWeight: "bold"}}>Full-Stack Developer </span> 
+                        with a focus on web design patterns and application development. 
+                        Proficient in modern JavaScript, 
+                        including familiarity with current <span style={{color:"var(--fc-blue)"}}>build/testing tools</span>, 
+                        component-based <span style={{color:"var(--fc-blue)"}}> 
+                        UI/UX libraries,</span> and design <span style={{color:"var(--fc-blue)"}}>best practices.</span> </p>
 
-                    <p> Most recently based in Baltimore. </p>
+                        <p className="home__hide-sm"> 
+                        <span style={{color:"var(--fc-blue)"}}>Actively seeking opportunities</span> where 
+                            I can utilize and extend current skills to solve challenging and unique problems. </p>
 
-                    <motion.button onClick={() => history.push("/skills")} className="button home__button" value="See More" whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}> 
+                        <p> Most recently based in Baltimore, working as a <span style={{color:"var(--fc-blue)"}}>Front-End Developer</span>. </p>
+
+                    <motion.button onClick={() => history.push("/skills")} className="button home__button" value="Learn More About Me" whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}> 
                         Learn More About Me
                     </motion.button>
                 </div>
