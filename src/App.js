@@ -72,7 +72,7 @@ function AppContainer(){
   }, [location]);
 
   return(
-    <div className="app-container">
+    <div id="app-container" className="app-container">
       <Particles className="particles" style={{position: "absolute", top: 0, left: 0, height: "100%", opacity: 0.5}} />
 
       <div ref={homeSectionStartEl}></div>

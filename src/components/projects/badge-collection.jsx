@@ -69,7 +69,7 @@ function BadgeCollection(props) {
     return (
         <div className="badges">
             {props.badges.map((key) => {
-                return <Badge icon={Badges[key].icon} label={Badges[key].label} />
+                return <Badge key={key} icon={Badges[key].icon} label={Badges[key].label} />
             })}
         </div>
     );
