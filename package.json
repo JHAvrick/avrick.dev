@@ -20,6 +20,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
     "react-tilt": "^0.1.4",
+    "react-use-media-query-hook": "0.0.1",
     "react-visibility-sensor": "^5.1.1",
     "sendmail": "^1.6.1"
   },

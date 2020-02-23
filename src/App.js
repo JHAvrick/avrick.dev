@@ -1,4 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react';
+import useMediaQuery from 'react-use-media-query-hook';
 import 'normalize.css';
 import './App.css';
 
@@ -32,11 +33,8 @@ function App() {
 
 
 function AppContainer(){
-  /**
-   * Wait a couple seconds before activating the visiblity sensor components
-   */
-  // const [sensorsActive, setSensorsActive] = useState(false);
-  // useEffect(() => setTimeout(() => setSensorsActive(true), 5000), []);
+
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   /**
    * The static header appears based on different triggers depending on whether the user is descending or ascending
@@ -73,7 +71,7 @@ function AppContainer(){
 
   return(
     <div id="app-container" className="app-container">
-      <Particles className="particles" style={{position: "absolute", top: 0, left: 0, height: "100%", opacity: 0.5}} />
+      {isDesktop && <Particles className="particles" style={{position: "absolute", top: 0, left: 0, height: "100%", opacity: 0.5}} />}
 
       <div ref={homeSectionStartEl}></div>
       <VisibilitySensor delayedCall={true} onChange={handleHeaderVisible}>
